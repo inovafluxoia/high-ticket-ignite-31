@@ -283,35 +283,72 @@ export const ApplicationForm = () => {
   const [formData, setFormData] = useState<FormData>({
     nomeCompleto: "",
     nomeEmpresa: "",
-    cargo: "",
+    cargo: "CEO/Fundador",
     segmentoAtuacao: "",
     instagram: "",
     email: "",
     whatsapp: "",
-    faturamentoMensal: "",
+    faturamentoMensal: "100k-500k",
     faturamentoOutro: "",
     ritmoVendas: "",
-    clarezaProcesso: "",
+    clarezaProcesso: "7",
     timeComercial: "",
-    principalDesafio: "",
+    principalDesafio: "previsibilidade",
     principalDesafioOutro: "",
-    automatizacao: "",
+    automatizacao: "sim-parcial",
     tarefaAutomatizar: "",
     tempoOportunidadesPerdidas: "",
-    utilizaCrm: "",
+    utilizaCrm: "sim-planilhas",
     utilizaCrmOutro: "",
-    visibilidadeNumeros: "",
-    sistemaValioso: "",
+    visibilidadeNumeros: "sim-parcial",
+    sistemaValioso: "crm-completo",
     sistemaValiosoOutro: "",
-    nivelPrioridade: "",
-    investimento: "",
+    nivelPrioridade: "7-8",
+    investimento: "10k-20k",
     investimentoOutro: "",
-    garanteReuniao: "",
+    garanteReuniao: "sim-clareza",
     maiorUrgencia: ""
   });
 
   const updateFormData = (field: keyof FormData, value: string) => {
+    // Validações específicas
+    if (field === 'email' && value && !value.includes('@')) {
+      return; // Não atualiza se email não tem @
+    }
+    
+    if (field === 'whatsapp' && value) {
+      // Remove caracteres não numéricos
+      const cleanValue = value.replace(/\D/g, '');
+      // Só aceita entre 10 e 11 dígitos
+      if (cleanValue.length > 11) {
+        return;
+      }
+      // Formata o telefone para exibição
+      let formattedValue = cleanValue;
+      if (cleanValue.length >= 2) {
+        formattedValue = `(${cleanValue.slice(0, 2)})`;
+        if (cleanValue.length > 2) {
+          formattedValue += ` ${cleanValue.slice(2, cleanValue.length === 11 ? 7 : 6)}`;
+          if (cleanValue.length > (cleanValue.length === 11 ? 7 : 6)) {
+            formattedValue += `-${cleanValue.slice(cleanValue.length === 11 ? 7 : 6)}`;
+          }
+        }
+      }
+      setFormData(prev => ({ ...prev, [field]: formattedValue }));
+      return;
+    }
+    
     setFormData(prev => ({ ...prev, [field]: value }));
+  };
+
+  const handleKeyPress = (e: React.KeyboardEvent) => {
+    if (e.key === 'Enter' && isStepValid()) {
+      if (currentStep < questions.length - 1) {
+        nextStep();
+      } else {
+        handleSubmit();
+      }
+    }
   };
 
   const getCurrentQuestions = () => questions[currentStep] || [];
@@ -473,7 +510,7 @@ export const ApplicationForm = () => {
   return (
     <section id="application-form" className="section-premium section-dark">
       <div className="container mx-auto max-w-4xl">
-        <Card className="card-premium">
+        <Card className="card-premium" onKeyPress={handleKeyPress}>
           <CardHeader className="text-center space-y-4">
             <CardTitle className="text-2xl text-primary">
               Aplicação para Reunião de Diagnóstico
