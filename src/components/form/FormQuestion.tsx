@@ -3,6 +3,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 
 interface FormQuestionProps {
   question: Question;
@@ -12,6 +13,38 @@ interface FormQuestionProps {
 }
 
 export const FormQuestion = ({ question, value, formData, onUpdate }: FormQuestionProps) => {
+  if (question.type === 'select') {
+    return (
+      <div className="space-y-3">
+        <Label className="text-sm font-medium">{question.label}</Label>
+        <Select
+          value={value}
+          onValueChange={(newValue) => onUpdate(question.id, newValue)}
+        >
+          <SelectTrigger className="w-full">
+            <SelectValue placeholder="Selecione uma opção..." />
+          </SelectTrigger>
+          <SelectContent>
+            {question.options?.map((option) => (
+              <SelectItem key={option.value} value={option.value}>
+                {option.label}
+              </SelectItem>
+            ))}
+          </SelectContent>
+        </Select>
+        
+        {question.hasOther && question.otherField && value === (question.options?.find(opt => opt.label.includes('Outro:'))?.value) && (
+          <Input
+            value={formData[question.otherField]}
+            onChange={(e) => onUpdate(question.otherField!, e.target.value)}
+            placeholder="Especifique..."
+            className="mt-3"
+          />
+        )}
+      </div>
+    );
+  }
+  
   if (question.type === 'radio') {
     return (
       <div className="space-y-3">

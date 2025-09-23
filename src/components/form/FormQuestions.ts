@@ -18,7 +18,7 @@ export const questions: Question[][] = [
     { id: 'whatsapp', type: 'input', label: '7. Melhor WhatsApp/telefone: *', placeholder: '(11) 99999-9999' },
     { 
       id: 'faturamentoMensal', 
-      type: 'radio', 
+      type: 'select', 
       label: '8. Qual é o faturamento médio mensal da sua empresa? *',
       options: [
         { value: 'ate-30k', label: 'Até R$30 mil/mês' },
@@ -59,7 +59,7 @@ export const questions: Question[][] = [
   [
     { 
       id: 'principalDesafio', 
-      type: 'radio', 
+      type: 'select', 
       label: '12. Qual é o principal desafio do seu comercial hoje? *',
       options: [
         { value: 'volume-leads', label: 'Volume de leads qualificados' },
@@ -78,7 +78,7 @@ export const questions: Question[][] = [
   [
     { 
       id: 'automatizacao', 
-      type: 'radio', 
+      type: 'select', 
       label: '13. Você utiliza algum tipo de automação no seu processo comercial? *',
       options: [
         { value: 'sim-completa', label: 'Sim, automação completa' },
@@ -104,7 +104,7 @@ export const questions: Question[][] = [
   [
     { 
       id: 'utilizaCrm', 
-      type: 'radio', 
+      type: 'select', 
       label: '16. Você utiliza algum CRM ou sistema para gerenciar seu comercial? *',
       options: [
         { value: 'sim-crm-pago', label: 'Sim, CRM pago (Pipedrive, RD Station, etc.)' },
@@ -117,7 +117,7 @@ export const questions: Question[][] = [
     },
     { 
       id: 'visibilidadeNumeros', 
-      type: 'radio', 
+      type: 'select', 
       label: '17. Você tem visibilidade clara dos números do seu funil de vendas? *',
       options: [
         { value: 'sim-total', label: 'Sim, total visibilidade' },
@@ -128,7 +128,7 @@ export const questions: Question[][] = [
     },
     { 
       id: 'sistemaValioso', 
-      type: 'radio', 
+      type: 'select', 
       label: '18. Qual sistema seria mais valioso para o seu negócio hoje? *',
       options: [
         { value: 'crm-completo', label: 'CRM completo' },
@@ -145,7 +145,7 @@ export const questions: Question[][] = [
   [
     { 
       id: 'nivelPrioridade', 
-      type: 'radio', 
+      type: 'select', 
       label: '19. De 0 a 10, qual o nível de prioridade que "destravar o comercial" tem para você hoje? *',
       options: [
         { value: '0-3', label: '0 a 3 (baixa prioridade)' },
@@ -156,7 +156,7 @@ export const questions: Question[][] = [
     },
     { 
       id: 'investimento', 
-      type: 'radio', 
+      type: 'select', 
       label: '20. Qual seria o valor de investimento mensal que faria sentido para resolver definitivamente os gargalos do seu comercial? *',
       options: [
         { value: 'ate-5k', label: 'Até R$5.000' },
@@ -171,7 +171,7 @@ export const questions: Question[][] = [
     },
     { 
       id: 'garanteReuniao', 
-      type: 'radio', 
+      type: 'select', 
       label: '21. Ao marcar uma reunião de diagnóstico, você consegue garantir que terá tempo dedicado e foco total, entendendo que nossa agenda é concorrida? *',
       options: [
         { value: 'sim-clareza', label: 'Sim, tenho clareza da importância' },

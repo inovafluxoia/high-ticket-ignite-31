@@ -39,7 +39,7 @@ export interface FormData {
 
 export interface Question {
   id: keyof FormData;
-  type: 'input' | 'textarea' | 'email' | 'number' | 'radio';
+  type: 'input' | 'textarea' | 'email' | 'number' | 'radio' | 'select';
   label: string;
   placeholder?: string;
   options?: { value: string; label: string }[];
