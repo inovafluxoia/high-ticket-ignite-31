@@ -18,34 +18,37 @@ const Index = () => {
         {/* Hero Section - Full Width */}
         <HeroSection />
         
-        {/* Content Sections with Consistent Spacing */}
-        <div className="space-y-20 sm:space-y-24 md:space-y-28 lg:space-y-32 xl:space-y-40">
-          <TargetAudienceSection />
+        {/* Main Content Container - Controlled Width */}
+        <div className="w-full max-w-[1100px] mx-auto px-5 sm:px-6 lg:px-8">
+          {/* Content Sections with Consistent Spacing */}
+          <div className="space-y-20 sm:space-y-24 md:space-y-28 lg:space-y-32 xl:space-y-40">
+            <TargetAudienceSection />
+            
+            {/* Section Separator */}
+            <div className="section-separator-glow"></div>
+            
+            <AuthoritySection />
+            
+            {/* Section Separator */}
+            <div className="section-separator"></div>
+            
+            <JourneySection />
+            
+            {/* Section Separator */}
+            <div className="section-separator-glow"></div>
+            
+            <MethodSection />
+            
+            {/* Section Separator */}
+            <div className="section-separator"></div>
+            
+            <FinalCtaSection />
+          </div>
           
-          {/* Section Separator */}
-          <div className="section-separator-glow"></div>
-          
-          <AuthoritySection />
-          
-          {/* Section Separator */}
-          <div className="section-separator"></div>
-          
-          <JourneySection />
-          
-          {/* Section Separator */}
-          <div className="section-separator-glow"></div>
-          
-          <MethodSection />
-          
-          {/* Section Separator */}
-          <div className="section-separator"></div>
-          
-          <FinalCtaSection />
-        </div>
-        
-        {/* Form Section */}
-        <div className="mt-20 sm:mt-24 md:mt-28 lg:mt-32">
-          <ApplicationForm />
+          {/* Form Section */}
+          <div className="mt-20 sm:mt-24 md:mt-28 lg:mt-32">
+            <ApplicationForm />
+          </div>
         </div>
       </main>
     </div>
