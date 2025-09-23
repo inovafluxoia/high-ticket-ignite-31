@@ -3,7 +3,9 @@ export interface FormData {
   nomeCompleto: string;
   nomeEmpresa: string;
   cargo: string;
+  cargoOutro: string;
   segmentoAtuacao: string;
+  segmentoAtuacaoOutro: string;
   instagram: string;
   email: string;
   whatsapp: string;
@@ -52,8 +54,10 @@ export interface Question {
 export const defaultFormData: FormData = {
   nomeCompleto: "",
   nomeEmpresa: "",
-  cargo: "CEO/Fundador",
-  segmentoAtuacao: "",
+  cargo: "ceo",
+  cargoOutro: "",
+  segmentoAtuacao: "tecnologia",
+  segmentoAtuacaoOutro: "",
   instagram: "",
   email: "",
   whatsapp: "",

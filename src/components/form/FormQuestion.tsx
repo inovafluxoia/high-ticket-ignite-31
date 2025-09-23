@@ -21,12 +21,12 @@ export const FormQuestion = ({ question, value, formData, onUpdate }: FormQuesti
           value={value}
           onValueChange={(newValue) => onUpdate(question.id, newValue)}
         >
-          <SelectTrigger className="w-full">
-            <SelectValue placeholder="Selecione uma opção..." />
+          <SelectTrigger className="w-full bg-background">
+            <SelectValue placeholder={question.placeholder || "Selecione uma opção..."} />
           </SelectTrigger>
-          <SelectContent>
+          <SelectContent className="bg-background border border-border shadow-lg z-50">
             {question.options?.map((option) => (
-              <SelectItem key={option.value} value={option.value}>
+              <SelectItem key={option.value} value={option.value} className="bg-background hover:bg-accent">
                 {option.label}
               </SelectItem>
             ))}

@@ -5,11 +5,49 @@ export const questions: Question[][] = [
   [
     { id: 'nomeCompleto', type: 'input', label: '1. Qual é o seu nome completo? *', placeholder: 'Seu nome completo' },
     { id: 'nomeEmpresa', type: 'input', label: '2. Qual é o nome da sua empresa? *', placeholder: 'Nome da empresa' },
-    { id: 'cargo', type: 'input', label: '3. Qual é o seu cargo/função dentro da empresa? *', placeholder: 'Seu cargo/função' }
+    { 
+      id: 'cargo', 
+      type: 'select', 
+      label: '3. Qual é o seu cargo/função dentro da empresa? *', 
+      placeholder: 'Selecione seu cargo',
+      options: [
+        { value: 'ceo', label: 'CEO/Fundador' },
+        { value: 'diretor', label: 'Diretor' },
+        { value: 'gerente', label: 'Gerente' },
+        { value: 'coordenador', label: 'Coordenador' },
+        { value: 'supervisor', label: 'Supervisor' },
+        { value: 'analista', label: 'Analista' },
+        { value: 'vendedor', label: 'Vendedor' },
+        { value: 'outro-cargo', label: 'Outro:' }
+      ],
+      hasOther: true,
+      otherField: 'cargoOutro'
+    }
   ],
   // Etapa 1.2 - Dados da Empresa
   [
-    { id: 'segmentoAtuacao', type: 'input', label: '4. Em qual segmento de atuação sua empresa está inserida? *', placeholder: 'Segmento de atuação' },
+    { 
+      id: 'segmentoAtuacao', 
+      type: 'select', 
+      label: '4. Em qual segmento de atuação sua empresa está inserida? *', 
+      placeholder: 'Selecione o segmento',
+      options: [
+        { value: 'tecnologia', label: 'Tecnologia' },
+        { value: 'saude', label: 'Saúde' },
+        { value: 'educacao', label: 'Educação' },
+        { value: 'financeiro', label: 'Financeiro' },
+        { value: 'varejo', label: 'Varejo' },
+        { value: 'industria', label: 'Indústria' },
+        { value: 'servicos', label: 'Serviços' },
+        { value: 'consultoria', label: 'Consultoria' },
+        { value: 'marketing', label: 'Marketing' },
+        { value: 'imobiliario', label: 'Imobiliário' },
+        { value: 'alimentacao', label: 'Alimentação' },
+        { value: 'outro-segmento', label: 'Outro:' }
+      ],
+      hasOther: true,
+      otherField: 'segmentoAtuacaoOutro'
+    },
     { id: 'instagram', type: 'input', label: '5. Instagram (pessoal e/ou empresarial)? *', placeholder: '@seuinstagram' },
     { id: 'email', type: 'email', label: '6. Melhor e-mail de contato: *', placeholder: 'seu@email.com' }
   ],
