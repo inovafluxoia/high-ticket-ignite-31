@@ -53,10 +53,10 @@ export const FinalCtaSection = () => {
             <Button 
               onClick={scrollToForm}
               size="lg"
-              className="btn-primary-neon text-base sm:text-lg md:text-xl h-16 sm:h-18 md:h-20 px-8 sm:px-12 md:px-16 group shadow-2xl"
+              className="btn-primary-neon text-sm sm:text-base md:text-lg lg:text-xl h-12 sm:h-16 md:h-18 lg:h-20 px-4 sm:px-8 md:px-12 lg:px-16 group shadow-2xl w-full max-w-md sm:max-w-lg mx-auto"
             >
-              Aplicar para Reunião de Diagnóstico
-              <ArrowRight className="ml-3 sm:ml-4 h-6 w-6 sm:h-7 sm:w-7 transition-transform group-hover:translate-x-2" />
+              <span className="text-center">Aplicar para Reunião de Diagnóstico</span>
+              <ArrowRight className="ml-2 sm:ml-3 md:ml-4 h-4 w-4 sm:h-6 sm:w-6 md:h-7 md:w-7 transition-transform group-hover:translate-x-2 flex-shrink-0" />
             </Button>
             
             <p className="text-body text-white/75 max-w-lg mx-auto">
