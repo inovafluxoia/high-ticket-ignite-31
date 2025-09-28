@@ -62,18 +62,10 @@ export const FinalCtaSection = () => {
             </p>
 
             {/* Trust Indicators */}
-            <div className="flex flex-wrap justify-center items-center gap-6 sm:gap-8 text-sm sm:text-base text-muted-foreground pt-4">
+            <div className="flex justify-center items-center text-sm sm:text-base text-muted-foreground pt-4">
               <div className="flex items-center space-x-2">
                 <div className="w-2 h-2 bg-primary rounded-full"></div>
-                <span>Sem compromisso</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-accent rounded-full"></div>
-                <span>100% gratuito</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-primary rounded-full"></div>
-                <span>Resultados imediatos</span>
+                <span>Apenas comprometidos</span>
               </div>
             </div>
           </div>

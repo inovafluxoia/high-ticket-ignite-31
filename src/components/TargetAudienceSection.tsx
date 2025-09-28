@@ -40,10 +40,13 @@ export const TargetAudienceSection = () => {
             </div>
             
             <div className="text-center mt-auto pt-6 border-t border-primary/20">
-              <div className="inline-flex items-center space-x-3 px-6 py-3 bg-gradient-to-r from-primary to-accent rounded-full shadow-lg animate-scale-in" style={{ animationDelay: '0.9s' }}>
-                <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
-                <span className="text-white font-bold text-sm">PERFIL IDEAL</span>
-              </div>
+              <Button 
+                onClick={() => document.getElementById('application-form')?.scrollIntoView({ behavior: 'smooth' })}
+                className="btn-primary-neon animate-scale-in"
+                style={{ animationDelay: '0.9s' }}
+              >
+                Quero aplicar agora
+              </Button>
             </div>
           </div>
 
@@ -77,13 +80,10 @@ export const TargetAudienceSection = () => {
             </div>
             
             <div className="text-center mt-auto pt-6 border-t border-destructive/20">
-              <Button 
-                onClick={() => document.getElementById('application-form')?.scrollIntoView({ behavior: 'smooth' })}
-                className="btn-primary-neon animate-scale-in"
-                style={{ animationDelay: '1.1s' }}
-              >
-                Quero aplicar agora
-              </Button>
+              <div className="inline-flex items-center space-x-3 px-6 py-3 bg-gradient-to-r from-destructive/80 to-destructive rounded-full shadow-lg animate-scale-in" style={{ animationDelay: '1.1s' }}>
+                <X className="w-4 h-4 text-white" />
+                <span className="text-white font-bold text-sm">NÃO É IDEAL</span>
+              </div>
             </div>
           </div>
         </div>
