@@ -29,6 +29,8 @@ export const questions: Question[][] = [
       type: 'select', 
       label: '4. Em qual segmento de atuação sua empresa está inserida?', 
       placeholder: 'Selecione o segmento',
+      hasOther: true,
+      otherField: 'segmentoOutro',
       options: [
         { value: 'tecnologia', label: 'Tecnologia' },
         { value: 'saude', label: 'Saúde' },

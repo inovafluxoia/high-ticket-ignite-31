@@ -4,6 +4,7 @@ export interface FormData {
   nomeEmpresa: string;
   cargo: string;
   segmentoAtuacao: string;
+  segmentoOutro: string;
   whatsapp: string;
   instagram: string;
   email: string;
@@ -26,6 +27,7 @@ export const defaultFormData: FormData = {
   nomeEmpresa: "",
   cargo: "",
   segmentoAtuacao: "",
+  segmentoOutro: "",
   whatsapp: "",
   instagram: "",
   email: ""

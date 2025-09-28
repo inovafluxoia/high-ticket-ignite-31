@@ -10,7 +10,14 @@ export const useApplicationForm = () => {
   const { toast } = useToast();
 
   const updateFormData = (field: keyof FormData, value: string) => {
-    // Validações específicas - removida validação restritiva do email
+    // Validações específicas
+    
+    if (field === 'email' && value) {
+      // Validação básica do email: deve conter @ e .com
+      if (value.includes('@') && !value.includes('.com')) {
+        return; // Não atualiza se não tiver .com
+      }
+    }
     
     if (field === 'whatsapp' && value) {
       // Remove caracteres não numéricos
