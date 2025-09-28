@@ -32,11 +32,11 @@ export const MethodSection = () => {
           </div>
         </div>
 
-        <div className="grid-responsive-3 mb-16 sm:mb-20">
+        <div className="flex flex-wrap justify-center gap-6 mb-16 sm:mb-20">
           {methodSteps.map((step, index) => (
             <div 
               key={index} 
-              className="card-premium-enhanced group relative h-full text-center animate-fade-in-up"
+              className="card-premium-enhanced group relative text-center animate-fade-in-up flex-1 min-w-[280px] max-w-[320px]"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
               <div className="w-24 h-24 bg-gradient-to-br from-primary/20 to-accent/20 rounded-full flex items-center justify-center mx-auto mb-8 group-hover:from-primary/40 group-hover:to-accent/40 transition-all duration-500 shadow-lg hover:shadow-[0_0_30px_hsl(var(--primary)/0.3)]">
@@ -66,7 +66,7 @@ export const MethodSection = () => {
                   className="btn-primary-neon animate-scale-in"
                   style={{ animationDelay: '0.8s' }}
                 >
-                  Quero aplicar para diagnóstico
+                  Aplicar para Diagnóstico Estratégico
                 </Button>
               </div>
             </div>

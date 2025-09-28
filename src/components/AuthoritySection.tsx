@@ -1,10 +1,36 @@
+import finclassLogo from "@/assets/finclass-logo.png";
+import thiagoNigro from "@/assets/thiago-nigro.jpg";
+import flavioAugusto from "@/assets/flavio-augusto.jpg";
+import brunoPerini from "@/assets/bruno-perini.jpg";
+import equityLogo from "@/assets/equity-logo.jpg";
+
 export const AuthoritySection = () => {
-  // Company logos (as text for now, can be replaced with actual logos)
-  const companies = [
-    "PRIMOCAST",
-    "THIAGO NIGRO",
-    "FINCLASS", 
-    "EQUITY"
+  const authorities = [
+    {
+      name: "Finclass",
+      image: finclassLogo,
+      type: "logo"
+    },
+    {
+      name: "Thiago Nigro",
+      image: thiagoNigro,
+      type: "person"
+    },
+    {
+      name: "Flávio Augusto",
+      image: flavioAugusto,
+      type: "person"
+    },
+    {
+      name: "Bruno Perini",
+      image: brunoPerini,
+      type: "person"
+    },
+    {
+      name: "Equity+",
+      image: equityLogo,
+      type: "logo"
+    }
   ];
 
   return (
@@ -48,15 +74,25 @@ export const AuthoritySection = () => {
             <div className="w-16 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded-full"></div>
           </div>
           
-          <div className="grid-responsive-4 max-w-4xl mx-auto">
-            {companies.map((company, index) => (
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-5xl mx-auto">
+            {authorities.map((authority, index) => (
               <div
                 key={index}
-                className="card-premium p-6 group cursor-pointer hover:border-primary/50 transition-all duration-300 text-center"
+                className="card-premium group cursor-pointer hover:border-primary/50 transition-all duration-300 text-center overflow-hidden"
               >
-                <span className="text-base sm:text-lg font-bold text-muted-foreground group-hover:text-primary transition-colors duration-300">
-                  {company}
-                </span>
+                <div className="aspect-square mb-4 relative overflow-hidden rounded-lg">
+                  <img 
+                    src={authority.image} 
+                    alt={authority.name}
+                    className={`w-full h-full ${authority.type === 'person' ? 'object-cover object-center' : 'object-contain p-4'} group-hover:scale-105 transition-transform duration-300`}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+                <div className="pb-4">
+                  <h4 className="text-sm font-bold text-muted-foreground group-hover:text-primary transition-colors duration-300">
+                    {authority.name}
+                  </h4>
+                </div>
               </div>
             ))}
           </div>

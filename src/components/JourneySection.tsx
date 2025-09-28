@@ -48,7 +48,7 @@ export const JourneySection = () => {
                 <img 
                   src={milestone.image} 
                   alt={milestone.title}
-                  className="w-full h-80 object-cover rounded-t-lg group-hover:scale-105 transition-transform duration-500"
+                  className="w-full h-80 object-cover object-top rounded-t-lg group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-card/80 via-transparent to-transparent rounded-t-lg"></div>
                 <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">

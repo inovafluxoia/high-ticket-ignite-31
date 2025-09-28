@@ -19,21 +19,19 @@ export const FinalCtaSection = () => {
           {/* Main Message */}
           <div className="space-y-6 sm:space-y-8">
             <h2 className="text-section-title text-white font-bold leading-tight max-w-4xl mx-auto">
-              Cada mês sem previsibilidade é um{" "}
-              <span className="text-transparent bg-gradient-to-r from-destructive to-red-400 bg-clip-text">mês de risco</span> no seu caixa
+              Enquanto você lê isso, seus concorrentes com{" "}
+              <span className="text-transparent bg-gradient-to-r from-primary to-accent bg-clip-text">processos definidos</span> estão vendendo
             </h2>
             
             <div className="w-24 h-1 bg-gradient-to-r from-destructive to-red-400 mx-auto rounded-full"></div>
             
             <div className="space-y-4 sm:space-y-6 text-body-large text-white/90 max-w-4xl mx-auto">
-              <p>Sem previsibilidade, sua empresa não é saudável.</p>
-              <p>E sem uma empresa saudável, você não tem paz.</p>
               <p className="text-white font-semibold text-xl">
-                No fim, tudo volta para o mesmo ponto:
+                A falta de um comercial estruturado não é um problema de amanhã.
               </p>
-              <div className="flex items-center justify-center space-x-4 text-xl">
-                <span className="text-white">O comercial é o <span className="text-destructive font-bold">coração</span> da sua empresa. Se ele para, o negócio morre.</span>
-              </div>
+              <p className="text-xl">
+                É uma <span className="text-destructive font-bold">perda de dinheiro</span> hoje.
+              </p>
             </div>
           </div>
 
@@ -42,7 +40,7 @@ export const FinalCtaSection = () => {
             <div className="card-premium bg-gradient-to-br from-primary/10 to-accent/10 border-primary/30 max-w-2xl mx-auto">
               <div className="space-y-4">
                 <p className="text-body-large text-accent font-semibold">
-                  As reuniões de diagnóstico têm vagas limitadas na agenda da semana.
+                  A agenda de diagnóstico é limitada e prioriza empresas com potencial de crescimento e prontas para a ação.
                 </p>
                 <p className="text-body-large text-white font-bold">
                   Garanta a sua agora.
@@ -55,12 +53,12 @@ export const FinalCtaSection = () => {
               size="lg"
               className="btn-primary-neon text-sm sm:text-base md:text-lg lg:text-xl h-12 sm:h-16 md:h-18 lg:h-20 px-4 sm:px-8 md:px-12 lg:px-16 group shadow-2xl w-full max-w-md sm:max-w-lg mx-auto"
             >
-              <span className="text-center">Aplicar para Reunião de Diagnóstico</span>
+              <span className="text-center">Aplicar para Diagnóstico Estratégico</span>
               <ArrowRight className="ml-2 sm:ml-3 md:ml-4 h-4 w-4 sm:h-6 sm:w-6 md:h-7 md:w-7 transition-transform group-hover:translate-x-2 flex-shrink-0" />
             </Button>
             
             <p className="text-body text-white/75 max-w-lg mx-auto">
-              <strong className="text-white">Reunião gratuita</strong> onde você receberá insights e pontos estratégicos imediatos
+              Uma sessão de <strong className="text-white">clareza</strong> para empresas comprometidas com o próximo nível
             </p>
 
             {/* Trust Indicators */}
